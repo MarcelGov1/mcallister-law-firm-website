@@ -69,48 +69,51 @@ document.getElementById("year").textContent =
 
 
 /* ===============================
-   CONSULTATION FORM
+CONSULTATION FORM
 ================================ */
 
 const consultationForm =
-    document.getElementById("consultForm");
-
+document.getElementById("consultForm");
 
 const formSuccess =
-    document.getElementById("formSuccess");
-
+document.getElementById("formSuccess");
 
 consultationForm.addEventListener(
-    "submit",
-    function (event) {
+  "submit",
+  async function (event) {
+    event.preventDefault();
 
-        event.preventDefault();
+    const formData =
+      new FormData(consultationForm);
 
+    const name =
+      formData.get("name");
 
-        const formData =
-            new FormData(consultationForm);
+    try {
+      const response = await fetch(
+        "https://formspree.io/f/xdeowypl",
+        {
+          method: "POST",
+          body: formData,
+          headers: {
+            "Accept": "application/json"
+          }
+        }
+      );
 
-
-        const name =
-            formData.get("name");
-
-
-        /*
-         * This is currently a front-end
-         * demonstration.
-         *
-         * The form can later be connected
-         * to a Cloudflare Worker,
-         * Formspree, Web3Forms or another
-         * secure backend.
-         */
-
-
+      if (response.ok) {
         formSuccess.textContent =
-            `Thank you ${name}. Your consultation request has been prepared successfully. The firm will contact you using the details provided.`;
-
+          `Thank you ${name}. Your consultation request has been submitted successfully. The firm will contact you using the details provided.`;
 
         consultationForm.reset();
+      } else {
+        formSuccess.textContent =
+          "There was a problem submitting your consultation request. Please try again.";
+      }
 
+    } catch (error) {
+      formSuccess.textContent =
+        "There was a problem submitting your consultation request. Please check your internet connection and try again.";
     }
+  }
 );
