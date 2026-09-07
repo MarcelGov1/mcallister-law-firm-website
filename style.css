@@ -1,0 +1,1560 @@
+/* =====================================
+   MCALLISTER G LAW FIRM
+   PREMIUM BLACK + GOLD DESIGN
+===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+
+    --black: #0c0d0d;
+
+    --charcoal: #151616;
+
+    --charcoal-two: #1d1d1c;
+
+    --gold: #c89438;
+
+    --gold-light: #e0b15a;
+
+    --cream: #f0ede5;
+
+    --white: #f8f7f3;
+
+    --muted: #c7c5be;
+
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Inter", Arial, sans-serif;
+
+    background: var(--black);
+
+    color: var(--white);
+
+    line-height: 1.6;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+section {
+
+    scroll-margin-top: 90px;
+
+}
+
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.site-header {
+
+    position: relative;
+
+    z-index: 100;
+
+    background: #101111;
+
+}
+
+
+.topbar {
+
+    background: #090a0a;
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+    font-size: 12px;
+
+}
+
+
+.topbar-inner {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    min-height: 40px;
+
+    padding: 0 24px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 18px;
+
+    color: #ddd;
+
+}
+
+
+.topbar a:hover {
+
+    color: var(--gold-light);
+
+}
+
+
+.divider {
+
+    width: 1px;
+
+    height: 17px;
+
+    background: #555;
+
+}
+
+
+
+/* NAVIGATION */
+
+.navbar {
+
+    max-width: 1250px;
+
+    min-height: 92px;
+
+    padding: 15px 24px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: var(--gold-light);
+
+}
+
+
+
+
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    font-size: 13px;
+
+}
+
+
+.nav-links a {
+
+    padding: 12px 0;
+
+    position: relative;
+
+}
+
+
+.nav-links a:not(.nav-cta)::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 5px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    transition: .25s;
+
+}
+
+
+.nav-links a:hover::after,
+.nav-links .active::after {
+
+    width: 100%;
+
+}
+
+
+.nav-cta {
+
+    background: var(--gold);
+
+    color: white;
+
+    padding: 13px 20px !important;
+
+    border-radius: 3px;
+
+    text-transform: uppercase;
+
+    font-size: 11px;
+
+    letter-spacing: .6px;
+
+}
+
+
+.nav-cta:hover {
+
+    background: var(--gold-light);
+
+}
+
+
+.menu-toggle {
+
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+}
+
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+
+    min-height: 610px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(5,6,6,.98),
+            rgba(7,7,7,.88) 43%,
+            rgba(7,7,7,.35)
+        ),
+
+        radial-gradient(
+            circle at 75% 50%,
+            #50391d,
+            #181510 25%,
+            #080909 65%
+        );
+
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent 40%,
+            rgba(200,148,56,.07),
+            transparent 70%
+        );
+
+}
+
+
+.hero-content {
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 80px 24px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.hero-text {
+
+    max-width: 720px;
+
+}
+
+
+.eyebrow,
+.gold-eyebrow {
+
+    color: var(--gold-light);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 13px;
+
+}
+
+
+.hero h1 {
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(50px, 5.5vw, 82px);
+
+    line-height: .91;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+
+.hero h1 span,
+.hero h1 em {
+
+    color: var(--gold-light);
+
+    font-style: normal;
+
+}
+
+
+.quote {
+
+    border-left: 2px solid var(--gold);
+
+    padding-left: 18px;
+
+    margin: 27px 0;
+
+}
+
+
+.quote strong {
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 27px;
+
+}
+
+
+.quote p {
+
+    color: #ddd;
+
+    font-size: 14px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 47px;
+
+    padding: 14px 22px;
+
+    border: 1px solid var(--gold);
+
+    text-transform: uppercase;
+
+    font-size: 11px;
+
+    letter-spacing: .8px;
+
+    transition: .25s;
+
+}
+
+
+.btn.gold {
+
+    background: var(--gold);
+
+    color: white;
+
+}
+
+
+.btn.gold:hover {
+
+    background: var(--gold-light);
+
+    transform: translateY(-2px);
+
+}
+
+
+.btn.outline {
+
+    background: transparent;
+
+    color: white;
+
+}
+
+
+.btn.outline:hover {
+
+    background: rgba(200,148,56,.15);
+
+    transform: translateY(-2px);
+
+}
+
+
+
+/* Decorative scales */
+
+.scales-art {
+
+    position: absolute;
+
+    right: 7%;
+
+    top: 8%;
+
+    width: 40%;
+
+    height: 85%;
+
+    display: grid;
+
+    place-items: center;
+
+}
+
+
+.lady-scales {
+
+    font-size: 280px;
+
+    color: #a87831;
+
+    opacity: .75;
+
+    filter: drop-shadow(0 15px 25px #000);
+
+    transform: rotate(-4deg);
+
+}
+
+
+
+/* =====================================
+   PRACTICE
+===================================== */
+
+.practice {
+
+    padding: 32px 24px 45px;
+
+}
+
+
+.section-dark {
+
+    background:
+        linear-gradient(
+            180deg,
+            #171817,
+            #101111
+        );
+
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 32px;
+
+}
+
+
+.section-heading span {
+
+    height: 1px;
+
+    width: 65px;
+
+    background: var(--gold);
+
+}
+
+
+.section-heading p {
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    color: var(--gold-light);
+
+    font-size: 26px;
+
+}
+
+
+.practice-grid {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(6,1fr);
+
+    gap: 18px;
+
+}
+
+
+.practice-card {
+
+    text-align: center;
+
+    padding: 12px 8px;
+
+}
+
+
+.icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    margin: 0 auto 12px;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    color: var(--gold-light);
+
+    font-size: 24px;
+
+}
+
+
+.practice-card h3 {
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 21px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.practice-card p {
+
+    color: #ccc;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+
+}
+
+
+
+/* =====================================
+   GOLD BANNER
+===================================== */
+
+.limited-banner {
+
+    background:
+        linear-gradient(
+            90deg,
+            #ad7828,
+            #d09a3d,
+            #ad7828
+        );
+
+    text-align: center;
+
+    color: white;
+
+    padding: 11px 20px;
+
+    font-size: 14px;
+
+}
+
+
+.limited-banner span {
+
+    margin-right: 10px;
+
+}
+
+
+
+/* =====================================
+   ATTORNEY
+===================================== */
+
+.attorney {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 390px;
+
+    background: #151616;
+
+}
+
+
+.attorney-image {
+
+    min-height: 390px;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.1),
+            rgba(0,0,0,.75)
+        ),
+
+        radial-gradient(
+            circle at 35% 60%,
+            #684a26,
+            #21180f 35%,
+            #0b0b0b 75%
+        );
+
+}
+
+
+.gavel {
+
+    font-size: 155px;
+
+    transform: rotate(-15deg);
+
+    filter: drop-shadow(
+        0 12px 15px #000
+    );
+
+}
+
+
+.attorney-copy {
+
+    padding: 65px 55px;
+
+    max-width: 620px;
+
+}
+
+
+.attorney-copy h2 {
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 50px;
+
+    line-height: 1;
+
+    text-transform: uppercase;
+
+}
+
+
+.role {
+
+    color: #ccc;
+
+    margin-top: 4px;
+
+}
+
+
+.gold-line {
+
+    width: 32px;
+
+    height: 2px;
+
+    background: var(--gold);
+
+    margin: 18px 0;
+
+}
+
+
+.attorney-copy > p:not(.gold-eyebrow):not(.role) {
+
+    color: #d4d4d0;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* =====================================
+   APPROACH
+===================================== */
+
+.section-light {
+
+    background: var(--cream);
+
+    color: #171717;
+
+}
+
+
+.approach {
+
+    padding: 60px 24px;
+
+}
+
+
+.section-heading.dark p {
+
+    color: #97661e;
+
+}
+
+
+.section-heading.dark span {
+
+    background: #97661e;
+
+}
+
+
+.approach-grid {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 30px;
+
+    text-align: center;
+
+}
+
+
+.approach-grid > div {
+
+    padding: 22px;
+
+    border-top: 1px solid #c89a54;
+
+}
+
+
+.number {
+
+    color: #97661e;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+}
+
+
+.approach-grid h3 {
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 30px;
+
+    margin: 7px;
+
+}
+
+
+.approach-grid p {
+
+    font-size: 13px;
+
+    color: #555;
+
+}
+
+
+
+/* =====================================
+   CONSULTATION
+===================================== */
+
+.consultation {
+
+    background: var(--cream);
+
+    color: #171717;
+
+    padding: 70px max(24px, calc((100% - 1180px)/2));
+
+    display: grid;
+
+    grid-template-columns: .75fr 1.25fr;
+
+    gap: 60px;
+
+}
+
+
+.consult-copy h2 {
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 48px;
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+
+}
+
+
+.fee {
+
+    max-width: 400px;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.fee strong {
+
+    color: #97661e;
+
+}
+
+
+.info-row {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin: 22px 0;
+
+    font-size: 13px;
+
+}
+
+
+.info-row > span {
+
+    font-size: 25px;
+
+    color: #97661e;
+
+}
+
+
+
+/* FORM */
+
+.consult-form {
+
+    display: grid;
+
+    gap: 13px;
+
+}
+
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 13px;
+
+}
+
+
+.consult-form label {
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
+
+}
+
+
+input,
+select,
+textarea {
+
+    display: block;
+
+    width: 100%;
+
+    margin-top: 6px;
+
+    border: 1px solid #c9c6be;
+
+    background: white;
+
+    padding: 13px;
+
+    font-family: Inter, sans-serif;
+
+    font-size: 13px;
+
+    color: #222;
+
+    outline: none;
+
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 0 2px
+        rgba(168,121,47,.12);
+
+}
+
+
+textarea {
+
+    resize: vertical;
+
+}
+
+
+.form-note {
+
+    font-size: 10px;
+
+    color: #777;
+
+}
+
+
+.submit {
+
+    border: none;
+
+    cursor: pointer;
+
+    width: 210px;
+
+}
+
+
+.form-success {
+
+    color: #557020;
+
+    font-size: 12px;
+
+    min-height: 20px;
+
+}
+
+
+
+/* =====================================
+   CONTACT
+===================================== */
+
+.contact {
+
+    padding: 60px max(24px, calc((100% - 1180px)/2));
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 50px;
+
+}
+
+
+.contact-col {
+
+    border-right: 1px solid #3a352d;
+
+    padding-right: 30px;
+
+}
+
+
+.contact-col:last-child {
+
+    border-right: none;
+
+}
+
+
+.contact-col a,
+.contact-col > p:not(.gold-eyebrow) {
+
+    display: block;
+
+    color: #ddd;
+
+    font-size: 13px;
+
+    margin: 8px 0;
+
+}
+
+
+.contact-col a:hover {
+
+    color: var(--gold-light);
+
+}
+
+
+.contact-col .sub {
+
+    margin-top: 22px;
+
+}
+
+
+.map-link {
+
+    color: var(--gold-light) !important;
+
+}
+
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+
+    background: #090a0a;
+
+    border-top: 1px solid #3b301f;
+
+    text-align: center;
+
+    padding: 23px;
+
+    color: #aaa;
+
+    font-size: 11px;
+
+}
+
+
+footer p {
+
+    color: var(--gold-light);
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 18px;
+
+}
+
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media(max-width:1000px) {
+
+    .nav-links {
+
+        gap: 16px;
+
+    }
+
+
+    .practice-grid {
+
+        grid-template-columns:
+        repeat(3,1fr);
+
+    }
+
+
+    .scales-art {
+
+        right: -5%;
+
+        width: 55%;
+
+        opacity: .45;
+
+    }
+
+}
+
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media(max-width:760px) {
+
+    .topbar {
+
+        display: none;
+
+    }
+
+
+    .navbar {
+
+        min-height: 75px;
+
+        padding: 10px 18px;
+
+    }
+
+
+    .brand-mark {
+
+        width: 48px;
+
+        height: 48px;
+
+        font-size: 15px;
+
+    }
+
+
+    .brand-name {
+
+        font-size: 20px;
+
+    }
+
+
+    .brand-name small {
+
+        font-size: 9px;
+
+    }
+
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+
+    .nav-links {
+
+        position: absolute;
+
+        left: 0;
+
+        right: 0;
+
+        top: 75px;
+
+        background: #111313;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 8px 18px 20px;
+
+        border-top: 1px solid #302d27;
+
+        box-shadow: 0 15px 30px #000;
+
+    }
+
+
+    .nav-links.open {
+
+        display: flex;
+
+    }
+
+
+    .nav-links a {
+
+        padding: 13px 3px;
+
+    }
+
+
+    .nav-cta {
+
+        text-align: center;
+
+        margin-top: 8px;
+
+    }
+
+
+    .hero {
+
+        min-height: 650px;
+
+    }
+
+
+    .hero-content {
+
+        padding: 70px 22px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 49px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .hero-buttons .btn {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    .scales-art {
+
+        opacity: .16;
+
+        width: 90%;
+
+        right: -25%;
+
+    }
+
+
+    .lady-scales {
+
+        font-size: 220px;
+
+    }
+
+
+    .practice {
+
+        padding: 30px 16px;
+
+    }
+
+
+    .practice-grid {
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap: 8px;
+
+    }
+
+
+    .practice-card {
+
+        padding: 15px 5px;
+
+    }
+
+
+    .practice-card h3 {
+
+        font-size: 18px;
+
+    }
+
+
+    .attorney {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .attorney-image {
+
+        min-height: 260px;
+
+    }
+
+
+    .attorney-copy {
+
+        padding: 45px 24px;
+
+    }
+
+
+    .attorney-copy h2 {
+
+        font-size: 40px;
+
+    }
+
+
+    .approach-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .consultation {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 50px 20px;
+
+    }
+
+
+    .consult-copy h2 {
+
+        font-size: 40px;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .contact {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 50px 24px;
+
+    }
+
+
+    .contact-col {
+
+        border-right: none;
+
+        border-bottom: 1px solid #3a352d;
+
+        padding-bottom: 25px;
+
+    }
+
+
+    .contact-col:last-child {
+
+        border-bottom: none;
+
+    }
+
+}
+
+
+
+/* =====================================
+   SMALL PHONES
+===================================== */
+
+@media(max-width:390px) {
+
+    .hero h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .practice-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+/* =====================================
+   REAL LAW FIRM LOGO
+===================================== */
+
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    width: 310px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* Desktop */
+@media (max-width: 1000px) {
+
+    .logo {
+        width: 250px;
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width: 760px) {
+
+    .logo {
+        width: 210px;
+        max-width: 75vw;
+    }
+
+}
