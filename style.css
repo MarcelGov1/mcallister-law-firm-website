@@ -1573,3 +1573,162 @@ footer p {
 .developer-credit a:hover {
   text-decoration: underline;
 }
+
+/* =====================================
+   AFFILIATIONS
+===================================== */
+
+.affiliations {
+
+    background: var(--cream);
+
+    color: #171717;
+
+    padding: 65px 24px;
+
+}
+
+
+.affiliations-intro {
+
+    max-width: 650px;
+
+    margin: -15px auto 35px;
+
+    text-align: center;
+
+}
+
+
+.affiliations-intro p {
+
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+.affiliations-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.affiliation-card {
+
+    background: #ffffff;
+
+    border: 1px solid #ddd8cc;
+
+    padding: 28px 24px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    transition: .25s;
+
+}
+
+
+.affiliation-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color: var(--gold);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,0,0,.08);
+
+}
+
+
+.affiliation-icon {
+
+    min-width: 48px;
+
+    height: 48px;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #97661e;
+
+    font-size: 20px;
+
+}
+
+
+.affiliation-card h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        Georgia,
+        serif;
+
+    font-size: 22px;
+
+    line-height: 1.1;
+
+    margin-bottom: 8px;
+
+}
+
+
+.affiliation-card p {
+
+    color: #555;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+    .affiliations {
+
+        padding: 50px 18px;
+
+    }
+
+
+    .affiliations-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .affiliation-card {
+
+        padding: 23px 20px;
+
+    }
+
+}
