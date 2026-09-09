@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.mcallistergandcompany.co.za/sitemap.xml
+Sitemap: https://www.mcallisterglawfirm.co.za/sitemap.xml
