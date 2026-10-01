@@ -18,18 +18,13 @@
           content="McAllister G Law Firm provides legal services to clients in Durban and surrounding areas, including criminal cases, matrimonial cases, divorce, child custody, maintenance, civil court cases and administration of deceased estates.">
 
     <meta name="keywords"
-          content="attorneys Durban, attorney Durban, lawyers Durban, lawyer Durban, law firm Durban, legal services Durban, criminal lawyer Durban, family lawyer Durban, divorce lawyer Durban, civil lawyer Durban, deceased estates Durban">
+          content="attorneys Durban, attorney Durban, lawyers Durban, lawyer Durban, law firm Durban, legal services Durban, criminal lawyer Durban, family lawyer Durban, civil lawyer Durban, deceased estates Durban">
 
     <meta name="author"
           content="McAllister G Law Firm">
 
     <meta name="robots"
           content="index, follow, max-image-preview:large">
-
-
-    <!-- =====================================================
-         CANONICAL
-    ====================================================== -->
 
     <link rel="canonical"
           href="https://www.mcallisterglawfirm.co.za/attorneys-durban.html">
@@ -89,7 +84,7 @@
 
 
     <!-- =====================================================
-         MAIN STYLESHEET
+         YOUR EXISTING CSS
     ====================================================== -->
 
     <link rel="stylesheet"
@@ -97,10 +92,12 @@
 
 
     <!-- =====================================================
-         DURBAN PAGE STYLES
+         PAGE-SPECIFIC STYLING
     ====================================================== -->
 
     <style>
+
+        /* Breadcrumb */
 
         .location-breadcrumb {
             background: #090a0a;
@@ -126,6 +123,8 @@
         }
 
 
+        /* Location page content */
+
         .location-content {
             max-width: 1050px;
             margin: auto;
@@ -133,7 +132,10 @@
         }
 
         .location-content h2 {
-            font-family: "Cormorant Garamond", Georgia, serif;
+            font-family: "Cormorant Garamond",
+                         Georgia,
+                         serif;
+
             font-size: 42px;
             line-height: 1.05;
             margin-bottom: 18px;
@@ -150,6 +152,9 @@
             margin-bottom: 18px;
         }
 
+
+        /* Dark content */
+
         .location-dark {
             background: #151616;
             color: white;
@@ -164,11 +169,17 @@
         }
 
 
+        /* Location service cards */
+
         .location-services {
             max-width: 1100px;
             margin: auto;
+
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
             gap: 20px;
         }
 
@@ -185,7 +196,10 @@
         }
 
         .location-service-card h3 {
-            font-family: "Cormorant Garamond", Georgia, serif;
+            font-family: "Cormorant Garamond",
+                         Georgia,
+                         serif;
+
             color: var(--gold-light);
             font-size: 27px;
             margin-bottom: 10px;
@@ -197,6 +211,8 @@
             line-height: 1.7;
         }
 
+
+        /* FAQ */
 
         .faq-section {
             background: var(--cream);
@@ -215,7 +231,10 @@
         }
 
         .faq-heading p {
-            font-family: "Cormorant Garamond", Georgia, serif;
+            font-family: "Cormorant Garamond",
+                         Georgia,
+                         serif;
+
             color: #97661e;
             font-size: 28px;
         }
@@ -230,11 +249,20 @@
 
         .faq-item summary {
             cursor: pointer;
+
             list-style: none;
+
             padding: 21px 5px;
-            font-family: "Cormorant Garamond", Georgia, serif;
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
             font-size: 23px;
+
             font-weight: 600;
+
             color: #171717;
         }
 
@@ -264,11 +292,17 @@
         }
 
 
+        /* Other location links */
+
         .location-links {
             max-width: 1100px;
             margin: auto;
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 15px;
         }
 
@@ -287,7 +321,11 @@
         }
 
         .location-link strong {
-            font-family: "Cormorant Garamond", Georgia, serif;
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
             font-size: 22px;
             display: block;
             margin-bottom: 3px;
@@ -298,6 +336,8 @@
             font-size: 11px;
         }
 
+
+        /* Mobile */
 
         @media(max-width:760px) {
 
@@ -337,114 +377,165 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "LegalService",
-        "name": "McAllister G Law Firm",
-        "url": "https://www.mcallisterglawfirm.co.za/attorneys-durban.html",
-        "logo": "https://www.mcallisterglawfirm.co.za/logo.jpg",
-        "telephone": "+27311402087",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "First Floor Liberty Life Building, 21 Aurora Drive",
-            "addressLocality": "Umhlanga",
-            "addressRegion": "KwaZulu-Natal",
-            "postalCode": "4319",
-            "addressCountry": "ZA"
-        },
-        "areaServed": [
-            "Durban",
-            "Umhlanga",
-            "Verulam",
-            "Tongaat",
-            "Phoenix",
-            "KwaDukuza"
-        ],
-        "serviceType": [
-            "Criminal Cases",
-            "Matrimonial Cases",
-            "Divorce",
-            "Child Custody",
-            "Maintenance",
-            "Civil Court Cases",
-            "Administration of Deceased Estates"
+        "@graph": [
+
+            {
+                "@type": "LegalService",
+                "@id": "https://www.mcallisterglawfirm.co.za/#legalservice",
+
+                "name": "McAllister G Law Firm",
+
+                "url": "https://www.mcallisterglawfirm.co.za/",
+
+                "description": "McAllister G Law Firm provides legal services to clients in Durban, Umhlanga, Phoenix, Tongaat, Verulam, KwaDukuza and surrounding areas of KwaZulu-Natal.",
+
+                "areaServed": [
+                    {
+                        "@type": "City",
+                        "name": "Durban"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Umhlanga"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Phoenix"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Tongaat"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "Verulam"
+                    },
+                    {
+                        "@type": "City",
+                        "name": "KwaDukuza"
+                    }
+                ],
+
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "21 Aurora Drive",
+                    "addressLocality": "Umhlanga",
+                    "addressRegion": "KwaZulu-Natal",
+                    "postalCode": "4319",
+                    "addressCountry": "ZA"
+                },
+
+                "telephone": "0311402087"
+            },
+
+
+            {
+                "@type": "WebSite",
+                "@id": "https://www.mcallisterglawfirm.co.za/#website",
+
+                "url": "https://www.mcallisterglawfirm.co.za/",
+
+                "name": "McAllister G Law Firm",
+
+                "publisher": {
+                    "@id": "https://www.mcallisterglawfirm.co.za/#legalservice"
+                }
+            },
+
+
+            {
+                "@type": "WebPage",
+                "@id": "https://www.mcallisterglawfirm.co.za/attorneys-durban.html",
+
+                "url": "https://www.mcallisterglawfirm.co.za/attorneys-durban.html",
+
+                "name": "Attorneys in Durban | McAllister G Law Firm",
+
+                "description": "McAllister G Law Firm provides legal services to clients in Durban and surrounding areas.",
+
+                "isPartOf": {
+                    "@id": "https://www.mcallisterglawfirm.co.za/#website"
+                },
+
+                "about": {
+                    "@id": "https://www.mcallisterglawfirm.co.za/#legalservice"
+                },
+
+                "inLanguage": "en-ZA"
+            }
+
         ]
     }
     </script>
 
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "McAllister G Law Firm",
-        "url": "https://www.mcallisterglawfirm.co.za/"
-    }
-    </script>
-
+    <!-- =====================================================
+         FAQ STRUCTURED DATA
+    ====================================================== -->
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Attorneys in Durban | McAllister G Law Firm",
-        "url": "https://www.mcallisterglawfirm.co.za/attorneys-durban.html",
-        "description": "Legal services provided by McAllister G Law Firm to clients in Durban and surrounding areas."
-    }
-    </script>
 
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
         "@type": "FAQPage",
+
         "mainEntity": [
+
             {
                 "@type": "Question",
-                "name": "Does McAllister G Law Firm provide legal services in Durban?",
+
+                "name": "Does McAllister G Law Firm assist clients in Durban?",
+
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. McAllister G Law Firm provides legal services to clients in Durban and surrounding areas from its office in Umhlanga."
+                    "text": "Yes. McAllister G Law Firm assists clients from Durban and surrounding areas. The firm's office is located at 21 Aurora Drive, Umhlanga, KwaZulu-Natal."
                 }
             },
+
             {
                 "@type": "Question",
-                "name": "What legal services are available to clients in Durban?",
+
+                "name": "What legal services does McAllister G Law Firm provide?",
+
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "The firm assists with criminal cases, matrimonial cases, divorce, child custody, maintenance, civil court cases and administration of deceased estates."
+                    "text": "McAllister G Law Firm provides legal services including criminal cases, matrimonial cases, divorce, child custody, maintenance, civil court cases and administration of deceased estates."
                 }
             },
+
             {
                 "@type": "Question",
-                "name": "Can I contact an attorney about a criminal matter in Durban?",
+
+                "name": "Can clients from Durban arrange a consultation?",
+
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. McAllister G Law Firm provides legal assistance in criminal matters, including bail applications and related criminal proceedings."
+                    "text": "Yes. Clients from Durban can contact McAllister G Law Firm to enquire about arranging a consultation and discussing their particular legal matter."
                 }
             },
+
             {
                 "@type": "Question",
-                "name": "Does the firm handle divorce and matrimonial matters?",
+
+                "name": "Where is McAllister G Law Firm located?",
+
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. The firm provides legal assistance relating to matrimonial matters, divorce and related family-law issues."
+                    "text": "McAllister G Law Firm is located at 21 Aurora Drive, Umhlanga, KwaZulu-Natal and assists clients from Durban and surrounding areas."
                 }
             },
+
             {
                 "@type": "Question",
-                "name": "Can the firm assist with child custody and maintenance?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. The firm assists clients with child custody matters as well as child and spousal maintenance matters."
-                }
-            },
-            {
-                "@type": "Question",
+
                 "name": "Does McAllister G Law Firm assist with deceased estates?",
+
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. McAllister G Law Firm provides assistance with the administration of deceased estates and associated legal requirements."
+                    "text": "Yes. Administration of deceased estates is one of the legal services offered by McAllister G Law Firm."
                 }
             }
+
         ]
     }
     </script>
@@ -455,155 +546,180 @@
 <body>
 
 
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
+<!-- =====================================================
+     HEADER
+====================================================== -->
 
-    <header>
-
-        <div class="topbar">
-
-            <div class="topbar-inner">
-
-                <div>
-                    <span>
-                        DURBAN • KWAZULU-NATAL
-                    </span>
-                </div>
-
-                <div>
-
-                    <a href="tel:0311402087">
-                        Call 031 140 2087
-                    </a>
-
-                    <a href="#consultation">
-                        Request a Consultation
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
+<header class="site-header">
 
 
-        <nav class="navbar">
+    <!-- TOP BAR -->
 
-            <div class="nav-inner">
+    <div class="topbar">
 
-                <a href="index.html"
-                   class="logo">
+        <div class="topbar-inner">
 
-                    <img src="logo.jpg"
-                         alt="McAllister G Law Firm">
-
-                </a>
-
-
-                <button class="menu-toggle"
-                        onclick="toggleMenu()"
-                        aria-label="Open navigation menu">
-
-                    ☰
-
-                </button>
-
-
-                <div class="nav-links"
-                     id="navLinks">
-
-                    <a href="index.html">
-                        Home
-                    </a>
-
-                    <a href="index.html#about">
-                        About
-                    </a>
-
-                    <a href="index.html#services">
-                        Services
-                    </a>
-
-                    <a href="index.html#attorney">
-                        Attorney
-                    </a>
-
-                    <a href="index.html#contact">
-                        Contact
-                    </a>
-
-                    <a href="#consultation"
-                       class="nav-cta">
-
-                        Consultation
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </nav>
-
-    </header>
-
-
-    <!-- =====================================================
-         BREADCRUMB
-    ====================================================== -->
-
-    <div class="location-breadcrumb">
-
-        <div class="location-breadcrumb-inner">
-
-            <a href="index.html">
-                Home
+            <a href="tel:0311402087">
+                Call the Firm
             </a>
 
-            <span>›</span>
+            <span class="divider"></span>
 
-            Attorneys in Durban
+            <a href="index.html#contact">
+                Request a Consultation
+            </a>
 
         </div>
 
     </div>
 
 
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
+    <!-- NAVIGATION -->
 
-    <section class="hero">
+    <div class="navbar">
 
-        <div class="hero-content">
+
+        <a href="index.html"
+           class="brand"
+           aria-label="McAllister G Law Firm">
+
+            <img
+                src="logo.jpg"
+                alt="McAllister G Law Firm"
+                class="logo"
+            >
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            aria-label="Open navigation"
+            onclick="toggleMenu()">
+
+            ☰
+
+        </button>
+
+
+        <nav aria-label="Main navigation">
+
+            <div class="nav-links"
+                 id="navLinks">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="index.html#services">
+                    Services
+                </a>
+
+                <a href="index.html#attorney">
+                    Attorney
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+                <a href="index.html#consultation"
+                   class="nav-cta">
+
+                    Consultation
+
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     BREADCRUMB
+====================================================== -->
+
+<div class="location-breadcrumb">
+
+    <div class="location-breadcrumb-inner">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <span>›</span>
+
+        Attorneys in Durban
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<main>
+
+
+<section class="hero">
+
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="hero-content">
+
+
+        <div class="hero-text">
+
 
             <p class="eyebrow">
                 LEGAL SERVICES • DURBAN • KWAZULU-NATAL
             </p>
+
 
             <h1>
                 ATTORNEYS
                 <span>IN DURBAN</span>
             </h1>
 
-            <p class="hero-quote">
-                Professional legal assistance for individuals
-                and families in Durban and surrounding areas.
-            </p>
+
+            <div class="quote">
+
+                <strong>
+                    Professional Legal Assistance
+                </strong>
+
+                <p>
+                    Serving clients in Durban and surrounding
+                    areas from our Umhlanga office.
+                </p>
+
+            </div>
 
 
             <div class="hero-buttons">
 
-                <a href="#consultation"
-                   class="btn btn-primary">
+                <a href="index.html#consultation"
+                   class="btn gold">
 
                     Request a Consultation
 
                 </a>
 
-                <a href="#contact"
-                   class="btn btn-outline">
+
+                <a href="index.html#contact"
+                   class="btn outline">
 
                     Contact the Firm
 
@@ -611,92 +727,43 @@
 
             </div>
 
+
         </div>
 
 
-        <div class="hero-symbol">
-            ⚖
-        </div>
+        <div class="scales-art"
+             aria-hidden="true">
 
-    </section>
-
-
-    <!-- =====================================================
-         INTRODUCTION
-    ====================================================== -->
-
-    <section class="location-dark">
-
-        <div class="location-content">
-
-            <div class="section-heading">
-
-                <span></span>
-
-                <p>
-                    DURBAN ATTORNEYS
-                </p>
-
-                <span></span>
-
+            <div class="lady-scales">
+                ⚖
             </div>
 
-
-            <h2>
-                Attorneys Serving
-                <span>Durban</span>
-            </h2>
-
-
-            <p>
-                McAllister G Law Firm provides professional legal
-                services to individuals, families and clients in
-                Durban and surrounding areas of KwaZulu-Natal.
-            </p>
-
-
-            <p>
-                The firm assists clients with a range of legal
-                matters, including criminal cases, matrimonial
-                matters, divorce, child custody, maintenance,
-                civil court cases and administration of deceased
-                estates.
-            </p>
-
-
-            <p>
-                Clients can obtain legal assistance and guidance
-                regarding their individual circumstances, with
-                matters assessed according to the relevant legal
-                issues and available legal processes.
-            </p>
-
-
-            <p>
-                The firm's office is located at the First Floor
-                Liberty Life Building, 21 Aurora Drive, Umhlanga,
-                providing a convenient point of contact for
-                clients from Durban and surrounding areas.
-            </p>
-
         </div>
 
-    </section>
+
+    </div>
+
+</section>
 
 
-    <!-- =====================================================
-         AREAS OF PRACTICE
-    ====================================================== -->
 
-    <section class="practice section-dark"
-             id="areas-of-practice">
+
+<!-- =====================================================
+     INTRODUCTION
+====================================================== -->
+
+<section class="location-dark">
+
+
+    <div class="location-content">
+
 
         <div class="section-heading">
 
             <span></span>
 
             <p>
-                Areas of Practice
+                Attorneys Serving Durban
             </p>
 
             <span></span>
@@ -704,518 +771,460 @@
         </div>
 
 
-        <div class="practice-grid">
+        <h2>
+            Legal Services for
+            <span>Durban</span>
+            Clients
+        </h2>
 
 
-            <div class="practice-card">
-
-                <div class="icon">
-                    ⚖
-                </div>
-
-                <h3>
-                    Criminal Cases
-                </h3>
-
-                <p>
-                    Professional defence and representation in
-                    criminal matters, including bail applications
-                    and related criminal proceedings.
-                </p>
-
-            </div>
+        <p>
+            McAllister G Law Firm provides legal services to
+            clients in Durban and surrounding areas of
+            KwaZulu-Natal.
+        </p>
 
 
-            <div class="practice-card">
-
-                <div class="icon">
-                    ◯
-                </div>
-
-                <h3>
-                    Matrimonial Cases
-                </h3>
-
-                <p>
-                    Legal assistance and guidance relating to
-                    marriage, separation and other matrimonial
-                    matters.
-                </p>
-
-            </div>
+        <p>
+            The firm's office is located in Umhlanga and serves
+            clients from communities across the wider region.
+            If you are based in Durban and require legal
+            assistance, you can contact the firm to discuss your
+            particular legal matter.
+        </p>
 
 
-            <div class="practice-card">
-
-                <div class="icon">
-                    ♡
-                </div>
-
-                <h3>
-                    Divorce
-                </h3>
-
-                <p>
-                    Practical legal assistance throughout the
-                    divorce process, including matters relating
-                    to the parties and their legal interests.
-                </p>
-
-            </div>
+        <p>
+            Legal matters can differ considerably depending on
+            the circumstances involved. McAllister G Law Firm
+            can assist clients in understanding the legal
+            process relevant to their matter and the steps
+            that may be available.
+        </p>
 
 
-            <div class="practice-card">
+        <p>
 
-                <div class="icon">
-                    ♧
-                </div>
+            The firm provides legal services in a range of areas
+            including criminal cases, matrimonial cases, divorce,
+            child custody, maintenance, civil court cases and
+            the administration of deceased estates.
 
-                <h3>
-                    Child Custody
-                </h3>
-
-                <p>
-                    Legal assistance concerning child custody
-                    and arrangements relating to the care and
-                    welfare of children.
-                </p>
-
-            </div>
+        </p>
 
 
-            <div class="practice-card">
+    </div>
 
-                <div class="icon">
-                    R
-                </div>
-
-                <h3>
-                    Maintenance
-                </h3>
-
-                <p>
-                    Assistance with child and spousal maintenance
-                    matters and the legal processes associated
-                    with maintenance claims.
-                </p>
-
-            </div>
+</section>
 
 
-            <div class="practice-card">
+<!-- =====================================================
+     AREAS OF PRACTICE
+====================================================== -->
 
-                <div class="icon">
-                    ▣
-                </div>
+<section class="practice section-dark" id="areas-of-practice">
 
-                <h3>
-                    Civil Court Cases
-                </h3>
+    <div class="section-heading">
+        <span></span>
+        <p>Areas of Practice</p>
+        <span></span>
+    </div>
 
-                <p>
-                    Legal representation in civil matters,
-                    including proceedings in the Magistrate's
-                    Court and High Court.
-                </p>
+    <div class="practice-grid">
 
-            </div>
+        <!-- Criminal Cases -->
+        <div class="practice-card">
+            <div class="icon">⚖</div>
+
+            <h3>Criminal Cases</h3>
+
+            <p>
+                Professional defence and representation in criminal
+                matters, including bail applications and related
+                criminal proceedings.
+            </p>
+        </div>
 
 
-            <div class="practice-card">
+        <!-- Matrimonial Cases -->
+        <div class="practice-card">
+            <div class="icon">◯</div>
 
-                <div class="icon">
-                    ⚖
-                </div>
+            <h3>Matrimonial Cases</h3>
 
-                <h3>
-                    Administration of Deceased Estates
-                </h3>
+            <p>
+                Legal assistance and guidance relating to marriage,
+                separation and other matrimonial matters.
+            </p>
+        </div>
 
-                <p>
-                    Professional assistance with the administration
-                    of deceased estates and associated legal
-                    requirements.
-                </p>
 
-            </div>
+        <!-- Divorce -->
+        <div class="practice-card">
+            <div class="icon">♡</div>
 
+            <h3>Divorce</h3>
+
+            <p>
+                Practical legal assistance throughout the divorce
+                process, including matters relating to the parties
+                and their legal interests.
+            </p>
+        </div>
+
+
+        <!-- Child Custody -->
+        <div class="practice-card">
+            <div class="icon">♧</div>
+
+            <h3>Child Custody</h3>
+
+            <p>
+                Legal assistance concerning child custody and
+                arrangements relating to the care and welfare
+                of children.
+            </p>
+        </div>
+
+
+        <!-- Maintenance -->
+        <div class="practice-card">
+            <div class="icon">R</div>
+
+            <h3>Maintenance</h3>
+
+            <p>
+                Assistance with child and spousal maintenance
+                matters and the legal processes associated with
+                maintenance claims.
+            </p>
+        </div>
+
+
+        <!-- Civil Court Cases -->
+        <div class="practice-card">
+            <div class="icon">▣</div>
+
+            <h3>Civil Court Cases</h3>
+
+            <p>
+                Legal representation in civil matters, including
+                proceedings in the Magistrate's Court and High Court.
+            </p>
+        </div>
+
+
+        <!-- Administration of Deceased Estates -->
+        <div class="practice-card">
+            <div class="icon">⚖</div>
+
+            <h3>Administration of Deceased Estates</h3>
+
+            <p>
+                Professional assistance with the administration of
+                deceased estates and associated legal requirements.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     APPROACH
+====================================================== -->
+
+<section class="approach section-light">
+
+
+    <div class="section-heading dark">
+
+        <span></span>
+
+        <p>
+            Your Legal Matter
+        </p>
+
+        <span></span>
+
+    </div>
+
+
+    <div class="approach-grid">
+
+
+        <div>
+
+            <span class="number">
+                01
+            </span>
+
+            <h3>
+                Discuss
+            </h3>
+
+            <p>
+                Contact the firm and provide information
+                about your legal circumstances.
+            </p>
 
         </div>
 
-    </section>
+
+        <div>
+
+            <span class="number">
+                02
+            </span>
+
+            <h3>
+                Assess
+            </h3>
+
+            <p>
+                Your matter can be considered according
+                to the circumstances you provide.
+            </p>
+
+        </div>
 
 
-    <!-- =====================================================
-         APPROACH
-    ====================================================== -->
+        <div>
 
-    <section class="approach section-light">
+            <span class="number">
+                03
+            </span>
+
+            <h3>
+                Proceed
+            </h3>
+
+            <p>
+                Discuss the appropriate next steps
+                for your particular legal matter.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DURBAN SERVICE AREA
+====================================================== -->
+
+<section class="section-light">
+
+
+    <div class="location-content">
+
+
+        <div class="section-heading dark">
+
+            <span></span>
+
+            <p>
+                Serving the Durban Community
+            </p>
+
+            <span></span>
+
+        </div>
+
+
+        <h2>
+            Attorneys Serving
+            <span>Durban</span>
+            and Surrounding Areas
+        </h2>
+
+
+        <p>
+            Durban is part of the wider KwaZulu-Natal region
+            served by McAllister G Law Firm.
+        </p>
+
+
+        <p>
+            While the firm's office is located in Umhlanga,
+            clients from Durban can contact McAllister G Law
+            Firm regarding their legal requirements and
+            consultation arrangements.
+        </p>
+
+
+        <p>
+            The firm also assists clients from Umhlanga, Phoenix,
+            Verulam, Tongaat, KwaDukuza and surrounding areas.
+        </p>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FAQ
+====================================================== -->
+
+<section class="faq-section">
+
+
+    <div class="faq-container">
+
+
+        <div class="faq-heading">
+
+            <p>
+                Frequently Asked Questions
+            </p>
+
+        </div>
+
+
+        <details class="faq-item">
+
+            <summary>
+                Does McAllister G Law Firm assist clients in Durban?
+            </summary>
+
+            <div class="faq-answer">
+
+                <p>
+                    Yes. McAllister G Law Firm assists clients
+                    from Durban and surrounding areas. The firm's
+                    office is located at 21 Aurora Drive, Umhlanga,
+                    KwaZulu-Natal.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+            <summary>
+                What legal services does the firm provide?
+            </summary>
+
+            <div class="faq-answer">
+
+                <p>
+                    McAllister G Law Firm provides legal services
+                    including criminal cases, matrimonial cases,
+                    divorce, child custody, maintenance, civil court
+                    cases and administration of deceased estates.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+            <summary>
+                Can clients from Durban arrange a consultation?
+            </summary>
+
+            <div class="faq-answer">
+
+                <p>
+                    Yes. Clients from Durban can contact
+                    McAllister G Law Firm to enquire about
+                    arranging a consultation and discussing
+                    their particular legal matter.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+            <summary>
+                Where is McAllister G Law Firm located?
+            </summary>
+
+            <div class="faq-answer">
+
+                <p>
+                    McAllister G Law Firm is located at 21 Aurora
+                    Drive, Umhlanga, KwaZulu-Natal and assists
+                    clients from Durban and surrounding areas.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+            <summary>
+                Does the firm assist with deceased estates?
+            </summary>
+
+            <div class="faq-answer">
+
+                <p>
+                    Yes. Administration of deceased estates is
+                    one of the legal services offered by
+                    McAllister G Law Firm.
+                </p>
+
+            </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+            <summary>
+                How can I contact McAllister G Law Firm?
+            </summary>
+
+            <div class="faq-answer">
+
+                <p>
+                    You can use the contact details provided on
+                    the firm's website to enquire about a
+                    consultation and discuss your legal matter.
+                </p>
+
+            </div>
+
+        </details>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OTHER LOCATION PAGES
+====================================================== -->
+
+<section class="section-dark">
+
+
+    <div class="location-content">
+
 
         <div class="section-heading">
 
             <span></span>
 
             <p>
-                OUR APPROACH
-            </p>
-
-            <span></span>
-
-        </div>
-
-
-        <div class="approach-grid">
-
-
-            <div class="approach-card">
-
-                <span>
-                    01
-                </span>
-
-                <h3>
-                    Discuss
-                </h3>
-
-                <p>
-                    Discuss your legal matter and provide
-                    information relevant to your circumstances.
-                </p>
-
-            </div>
-
-
-            <div class="approach-card">
-
-                <span>
-                    02
-                </span>
-
-                <h3>
-                    Assess
-                </h3>
-
-                <p>
-                    Your matter can be considered in relation
-                    to the relevant legal issues and available
-                    legal processes.
-                </p>
-
-            </div>
-
-
-            <div class="approach-card">
-
-                <span>
-                    03
-                </span>
-
-                <h3>
-                    Proceed
-                </h3>
-
-                <p>
-                    Where appropriate, the firm can assist with
-                    the next steps required for your matter.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         DURBAN SERVICE AREA
-    ====================================================== -->
-
-    <section class="section-light">
-
-        <div class="location-content">
-
-            <div class="section-heading">
-
-                <span></span>
-
-                <p>
-                    LOCAL LEGAL SERVICES
-                </p>
-
-                <span></span>
-
-            </div>
-
-
-            <h2>
-                Attorneys Serving
-                <span>Durban and Surrounding Areas</span>
-            </h2>
-
-
-            <p>
-                McAllister G Law Firm provides legal services to
-                clients in Durban and surrounding communities
-                throughout KwaZulu-Natal.
-            </p>
-
-
-            <p>
-                The firm assists clients with criminal matters,
-                family-related legal matters, civil proceedings
-                and the administration of deceased estates.
-            </p>
-
-
-            <p>
-                If you are based in Durban or a nearby area,
-                you can contact the firm to discuss your legal
-                requirements and determine the appropriate next
-                step for your matter.
-            </p>
-
-
-            <div class="location-services">
-
-
-                <div class="location-service-card">
-
-                    <h3>
-                        Criminal Law
-                    </h3>
-
-                    <p>
-                        Assistance with criminal cases, bail
-                        applications and related criminal
-                        proceedings.
-                    </p>
-
-                </div>
-
-
-                <div class="location-service-card">
-
-                    <h3>
-                        Family Law
-                    </h3>
-
-                    <p>
-                        Assistance with matrimonial matters,
-                        divorce, child custody and maintenance.
-                    </p>
-
-                </div>
-
-
-                <div class="location-service-card">
-
-                    <h3>
-                        Civil Matters
-                    </h3>
-
-                    <p>
-                        Legal representation and assistance
-                        relating to civil court matters.
-                    </p>
-
-                </div>
-
-
-                <div class="location-service-card">
-
-                    <h3>
-                        Deceased Estates
-                    </h3>
-
-                    <p>
-                        Assistance with the administration of
-                        deceased estates and associated legal
-                        requirements.
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         FAQ
-    ====================================================== -->
-
-    <section class="faq-section">
-
-        <div class="faq-container">
-
-
-            <div class="faq-heading">
-
-                <div class="section-heading">
-
-                    <span></span>
-
-                    <p>
-                        FREQUENTLY ASKED QUESTIONS
-                    </p>
-
-                    <span></span>
-
-                </div>
-
-                <h2>
-                    Legal Questions
-                    <span>About Durban</span>
-                </h2>
-
-            </div>
-
-
-            <details class="faq-item">
-
-                <summary>
-                    Does McAllister G Law Firm provide legal
-                    services in Durban?
-                </summary>
-
-                <div class="faq-answer">
-
-                    <p>
-                        Yes. McAllister G Law Firm provides legal
-                        services to clients in Durban and
-                        surrounding areas from its office in
-                        Umhlanga.
-                    </p>
-
-                </div>
-
-            </details>
-
-
-            <details class="faq-item">
-
-                <summary>
-                    What legal services are available to
-                    clients in Durban?
-                </summary>
-
-                <div class="faq-answer">
-
-                    <p>
-                        The firm assists with criminal cases,
-                        matrimonial cases, divorce, child custody,
-                        maintenance, civil court cases and
-                        administration of deceased estates.
-                    </p>
-
-                </div>
-
-            </details>
-
-
-            <details class="faq-item">
-
-                <summary>
-                    Can I contact an attorney about a criminal
-                    matter in Durban?
-                </summary>
-
-                <div class="faq-answer">
-
-                    <p>
-                        Yes. McAllister G Law Firm provides legal
-                        assistance in criminal matters, including
-                        bail applications and related criminal
-                        proceedings.
-                    </p>
-
-                </div>
-
-            </details>
-
-
-            <details class="faq-item">
-
-                <summary>
-                    Does the firm handle divorce and
-                    matrimonial matters?
-                </summary>
-
-                <div class="faq-answer">
-
-                    <p>
-                        Yes. The firm provides legal assistance
-                        relating to matrimonial matters, divorce
-                        and related family-law issues.
-                    </p>
-
-                </div>
-
-            </details>
-
-
-            <details class="faq-item">
-
-                <summary>
-                    Can the firm assist with child custody
-                    and maintenance?
-                </summary>
-
-                <div class="faq-answer">
-
-                    <p>
-                        Yes. The firm assists clients with child
-                        custody matters as well as child and
-                        spousal maintenance matters.
-                    </p>
-
-                </div>
-
-            </details>
-
-
-            <details class="faq-item">
-
-                <summary>
-                    Does McAllister G Law Firm assist with
-                    deceased estates?
-                </summary>
-
-                <div class="faq-answer">
-
-                    <p>
-                        Yes. McAllister G Law Firm provides
-                        assistance with the administration of
-                        deceased estates and associated legal
-                        requirements.
-                    </p>
-
-                </div>
-
-            </details>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         OTHER AREAS WE SERVE
-    ====================================================== -->
-
-    <section class="section-dark">
-
-        <div class="section-heading">
-
-            <span></span>
-
-            <p>
-                OTHER AREAS WE SERVE
+                Other Areas We Serve
             </p>
 
             <span></span>
@@ -1226,15 +1235,15 @@
         <div class="location-links">
 
 
-            <a href="attorneys-umhlanga.html"
+            <a href="attorneys-tongaat.html"
                class="location-link">
 
                 <strong>
-                    Attorneys in Umhlanga
+                    Attorneys in Tongaat
                 </strong>
 
                 <small>
-                    Legal services in Umhlanga
+                    Legal services in Tongaat
                 </small>
 
             </a>
@@ -1254,20 +1263,6 @@
             </a>
 
 
-            <a href="attorneys-tongaat.html"
-               class="location-link">
-
-                <strong>
-                    Attorneys in Tongaat
-                </strong>
-
-                <small>
-                    Legal services in Tongaat
-                </small>
-
-            </a>
-
-
             <a href="attorneys-phoenix.html"
                class="location-link">
 
@@ -1277,6 +1272,20 @@
 
                 <small>
                     Legal services in Phoenix
+                </small>
+
+            </a>
+
+
+            <a href="attorneys-umhlanga.html"
+               class="location-link">
+
+                <strong>
+                    Attorneys in Umhlanga
+                </strong>
+
+                <small>
+                    Legal services in Umhlanga
                 </small>
 
             </a>
@@ -1304,7 +1313,7 @@
                 </strong>
 
                 <small>
-                    View the main website
+                    Return to the main website
                 </small>
 
             </a>
@@ -1312,414 +1321,398 @@
 
         </div>
 
-    </section>
+    </div>
 
+</section>
 
-    <!-- =====================================================
-         CONSULTATION
-    ====================================================== -->
 
-    <section class="consultation"
-             id="consultation">
+<!-- =====================================================
+     CONSULTATION CTA
+====================================================== -->
 
-        <div class="consultation-inner">
+<section class="consultation">
 
 
-            <div class="consultation-content">
+    <div class="consult-copy">
 
-                <div class="section-heading">
 
-                    <span></span>
+        <p class="gold-eyebrow">
+            LEGAL CONSULTATION
+        </p>
 
-                    <p>
-                        REQUEST A CONSULTATION
-                    </p>
 
-                    <span></span>
+        <h2>
+            Discuss Your
+            Legal Matter
+        </h2>
 
-                </div>
 
+        <p class="fee">
+            If you are based in Durban and require legal
+            assistance, contact McAllister G Law Firm to
+            enquire about a consultation.
+        </p>
 
-                <h2>
-                    Discuss Your
-                    <span>Legal Matter</span>
-                </h2>
 
+        <div class="info-row">
 
-                <p>
-                    If you require legal assistance in Durban
-                    or a surrounding area, contact McAllister G
-                    Law Firm to discuss your matter.
-                </p>
+            <span>
+                ⚖
+            </span>
 
-
-                <div class="consultation-info">
-
-
-                    <div class="info-row">
-
-                        <strong>
-                            Location
-                        </strong>
-
-                        <span>
-                            First Floor Liberty Life Building,
-                            21 Aurora Drive, Umhlanga
-                        </span>
-
-                    </div>
-
-
-                    <div class="info-row">
-
-                        <strong>
-                            Office Hours
-                        </strong>
-
-                        <span>
-                            Monday – Friday, 08h00 – 16h00
-                        </span>
-
-                    </div>
-
-
-                    <div class="info-row">
-
-                        <strong>
-                            Urgent Matters
-                        </strong>
-
-                        <span>
-                            After-hours bail and urgent matters
-                            can be discussed with the firm.
-                        </span>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-
-            <div class="consultation-form">
-
-
-                <form action="#"
-                      method="post">
-
-
-                    <div class="form-group">
-
-                        <label for="full-name">
-                            Full Name
-                        </label>
-
-                        <input type="text"
-                               id="full-name"
-                               name="full-name"
-                               placeholder="Your full name"
-                               required>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="email">
-                            Email Address
-                        </label>
-
-                        <input type="email"
-                               id="email"
-                               name="email"
-                               placeholder="Your email address"
-                               required>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="phone">
-                            Phone Number
-                        </label>
-
-                        <input type="tel"
-                               id="phone"
-                               name="phone"
-                               placeholder="Your phone number"
-                               required>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="area">
-                            Area of Legal Assistance
-                        </label>
-
-                        <select id="area"
-                                name="area"
-                                required>
-
-                            <option value="">
-                                Select an area
-                            </option>
-
-                            <option value="criminal">
-                                Criminal Cases
-                            </option>
-
-                            <option value="matrimonial">
-                                Matrimonial Cases
-                            </option>
-
-                            <option value="divorce">
-                                Divorce
-                            </option>
-
-                            <option value="child-custody">
-                                Child Custody
-                            </option>
-
-                            <option value="maintenance">
-                                Maintenance
-                            </option>
-
-                            <option value="civil">
-                                Civil Court Cases
-                            </option>
-
-                            <option value="deceased-estates">
-                                Administration of Deceased Estates
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="message">
-                            Brief Description
-                        </label>
-
-                        <textarea id="message"
-                                  name="message"
-                                  rows="5"
-                                  placeholder="Briefly describe your legal matter..."
-                                  required></textarea>
-
-                    </div>
-
-
-                    <button type="submit"
-                            class="btn btn-primary">
-
-                        Request Consultation
-
-                    </button>
-
-
-                </form>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         CONTACT
-    ====================================================== -->
-
-    <section class="contact section-light"
-             id="contact">
-
-        <div class="contact-inner">
-
-
-            <div class="contact-content">
-
-                <div class="section-heading">
-
-                    <span></span>
-
-                    <p>
-                        CONTACT THE FIRM
-                    </p>
-
-                    <span></span>
-
-                </div>
-
-
-                <h2>
-                    McAllister G
-                    <span>Law Firm</span>
-                </h2>
-
-
-                <p>
-                    Legal services for clients in Durban,
-                    Umhlanga and surrounding areas of
-                    KwaZulu-Natal.
-                </p>
-
-
-                <div class="contact-details">
-
-
-                    <div class="contact-item">
-
-                        <strong>
-                            Address
-                        </strong>
-
-                        <p>
-                            First Floor Liberty Life Building<br>
-                            21 Aurora Drive<br>
-                            Umhlanga<br>
-                            KwaZulu-Natal<br>
-                            4319
-                        </p>
-
-                    </div>
-
-
-                    <div class="contact-item">
-
-                        <strong>
-                            Phone
-                        </strong>
-
-                        <p>
-                            <a href="tel:0311402087">
-                                031 140 2087
-                            </a>
-                        </p>
-
-                    </div>
-
-
-                    <div class="contact-item">
-
-                        <strong>
-                            Legal Services
-                        </strong>
-
-                        <p>
-                            Criminal Cases<br>
-                            Matrimonial Cases<br>
-                            Divorce<br>
-                            Child Custody<br>
-                            Maintenance<br>
-                            Civil Court Cases<br>
-                            Administration of Deceased Estates
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
-    <footer>
-
-        <div class="footer-inner">
-
-
-            <div class="footer-brand">
-
-                <h3>
-                    McAllister G Law Firm
-                </h3>
-
-                <p>
-                    Attorneys serving Durban and
-                    surrounding areas of KwaZulu-Natal.
-                </p>
-
-            </div>
-
-
-            <div class="footer-locations">
+            <div>
 
                 <strong>
-                    Locations
+                    McAllister G Law Firm
                 </strong>
 
-                <a href="attorneys-umhlanga.html">
-                    Umhlanga
-                </a>
+                <p>
+                    21 Aurora Drive, Umhlanga,
+                    KwaZulu-Natal, 4319
+                </p>
 
-                <a href="attorneys-durban.html">
-                    Durban
-                </a>
+            </div>
 
-                <a href="attorneys-verulam.html">
-                    Verulam
-                </a>
+        </div>
 
-                <a href="attorneys-tongaat.html">
-                    Tongaat
-                </a>
 
-                <a href="attorneys-phoenix.html">
-                    Phoenix
-                </a>
+        <div class="info-row">
 
-                <a href="attorneys-kwadukuza.html">
-                    KwaDukuza
-                </a>
+            <span>
+                ☎
+            </span>
+
+            <div>
+
+                <strong>
+                    Contact the Firm
+                </strong>
+
+                <p>
+                    Use the contact details on the main
+                    website to enquire about your matter.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div>
+
+
+        <form class="consult-form"
+              action="#"
+              method="post">
+
+
+            <div class="form-row">
+
+                <div>
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <div>
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Your email address"
+                        required
+                    >
+
+                </div>
 
             </div>
 
 
-        </div>
+            <div class="form-row">
+
+                <div>
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Your phone number"
+                    >
+
+                </div>
 
 
-        <div class="footer-bottom">
+                <div>
 
-            © 2026 McAllister G Law Firm.
-            All rights reserved.
+                    <label for="area">
+                        Area
+                    </label>
 
-        </div>
+                    <select
+                        id="area"
+                        name="area">
 
-    </footer>
+                        <option value="Durban">
+                            Durban
+                        </option>
+
+                        <option value="Tongaat">
+                            Tongaat
+                        </option>
+
+                        <option value="Verulam">
+                            Verulam
+                        </option>
+
+                        <option value="Phoenix">
+                            Phoenix
+                        </option>
+
+                        <option value="Umhlanga">
+                            Umhlanga
+                        </option>
+
+                        <option value="KwaDukuza">
+                            KwaDukuza
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
 
 
-    <!-- =====================================================
-         MOBILE NAVIGATION
-    ====================================================== -->
+            <div>
 
-    <script id="i7suyq">
+                <label for="message">
+                    Brief Description
+                </label>
 
-        function toggleMenu() {
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    placeholder="Briefly describe your legal matter..."
+                    required></textarea>
 
-            const nav =
-                document.getElementById("navLinks");
+            </div>
 
-            nav.classList.toggle("open");
 
-        }
+            <p class="form-note">
 
-    </script>
+                Please do not include highly confidential
+                information in this initial enquiry.
+
+            </p>
+
+
+            <button
+                type="submit"
+                class="btn gold submit">
+
+                Submit Enquiry
+
+            </button>
+
+
+            <div
+                class="form-success"
+                id="formSuccess">
+            </div>
+
+
+        </form>
+
+    </div>
+
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+====================================================== -->
+
+<section class="contact section-dark"
+         id="contact">
+
+
+    <div class="contact-col">
+
+
+        <p class="gold-eyebrow">
+            LOCATION
+        </p>
+
+
+        <p>
+            McAllister G Law Firm
+        </p>
+
+
+        <p>
+            21 Aurora Drive, Umhlanga,
+            KwaZulu-Natal, 4319
+        </p>
+
+
+        <p>
+            Serving clients in Durban and surrounding areas.
+        </p>
+
+
+    </div>
+
+
+    <div class="contact-col">
+
+
+        <p class="gold-eyebrow">
+            LEGAL SERVICES
+        </p>
+
+
+        <p>
+            Criminal Cases
+        </p>
+
+        <p>
+            Matrimonial Cases
+        </p>
+
+        <p>
+            Divorce
+        </p>
+
+        <p>
+            Child Custody
+        </p>
+
+        <p>
+            Maintenance
+        </p>
+
+        <p>
+            Civil Court Cases
+        </p>
+
+        <p>
+            Administration of Deceased Estates
+        </p>
+
+
+    </div>
+
+
+    <div class="contact-col">
+
+
+        <p class="gold-eyebrow">
+            CONTACT
+        </p>
+
+
+        <p>
+            Contact McAllister G Law Firm
+            regarding your legal matter.
+        </p>
+
+
+        <a href="index.html#consultation"
+           class="map-link">
+
+            Request a Consultation →
+
+        </a>
+
+
+        <a href="index.html">
+
+            Visit Main Website →
+
+        </a>
+
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+
+    <p>
+        McAllister G Law Firm
+    </p>
+
+
+    <div class="developer-credit">
+
+        Attorneys in Durban • Umhlanga • Phoenix •
+        Tongaat • Verulam • KwaDukuza
+
+    </div>
+
+
+    <div class="developer-credit">
+
+        © 2026 McAllister G Law Firm.
+        All rights reserved.
+
+    </div>
+
+
+</footer>
+
+
+<!-- =====================================================
+     MOBILE NAVIGATION
+====================================================== -->
+
+<script>
+
+function toggleMenu() {
+
+    const nav =
+        document.getElementById("navLinks");
+
+    nav.classList.toggle("open");
+
+}
+
+</script>
 
 
 </body>
